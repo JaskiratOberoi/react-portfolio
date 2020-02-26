@@ -1,0 +1,63 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #010101;
+  color: #f1f1f1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  float: right;
+}
+
+.navbar ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.navbar ul li:hover {
+  opacity: 1;
+}
+
+.navbar ul li::before {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #f1f1f1;
+}
+
+.navbar ul .ltr::before {
+  width: 0%;
+  bottom: 15px;
+}
+
+.navbar ul .ltr:hover::before {
+  width: 100%;
+}
+/*# sourceMappingURL=App.css.map */

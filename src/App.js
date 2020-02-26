@@ -1,14 +1,23 @@
 import React, { Component } from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./CSS/App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Test</h1>
-        </header>
-      </div>
+      <Router>
+        
+        <div className="conatiner">
+        <Navbar />
+        <Route exact path='/' render = {props=> ( 
+        <React.Fragment>
+          <Hero />
+        </React.Fragment> 
+        )} />
+        </div>
+      </Router>
     );
   }
 }
